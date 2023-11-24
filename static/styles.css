@@ -1,0 +1,38 @@
+.spinner {
+  font-size: 140px;
+}
+/* .spinner:after {
+  content: "◌";
+} */
+
+#chart {
+  border: 1px solid black;
+}
+div {
+  width: 100px;
+  height: 150px;
+  position: relative;
+}
+div span {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  margin-top: 70px;
+  margin-left: 20px;
+  background: black;
+  border-radius: 50%;
+  transform: rotate(calc(var(--n) * 24deg));
+  transform-origin: 30px 20px;
+  animation: animate_dot 1.5s ease-in infinite;
+  animation-delay: calc(var(--n) * 0.10s);
+}
+@keyframes animate_dot {
+  0%,
+  50% {
+    background: white;
+  }
+  50.01%,
+  100% {
+    background: black;
+  }
+}
